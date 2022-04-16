@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pablorios.linktracker.FXMLMainViewController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#subirFichero" text="Open file..." />
+            <MenuItem mnemonicParsing="false" onAction="#salir" text="Exit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Process">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#procesarDatos" text="Start" />
+            <MenuItem mnemonicParsing="false" onAction="#limpiarLista" text="Clear" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.3079064587973274, 0.6642538975501113" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane>
+               <children>
+                  <ListView fx:id="lvListaWebs" onMouseClicked="#handleMouseClick" prefHeight="570.0" prefWidth="250.0" />
+               </children>
+        </AnchorPane>
+            <AnchorPane prefHeight="100.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="labelTitulo" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="11.0" layoutY="516.0" text="LinkTracker" textAlignment="CENTER" textFill="#806e33">
+                     <font>
+                        <Font name="Consolas Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="13.0" layoutY="540.0" text="Pablo Ríos Martínez" textAlignment="CENTER" textFill="#806e33">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="35.0" text="Total pages" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbPagsTotalCargadas" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="65.0" text="0" textAlignment="CENTER">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="130.0" text="Processed" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbPagsProcesadas" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="160.0" text="0" textAlignment="CENTER">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="230.0" text="Total  links" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbLinksTotal" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="260.0" text="0">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        <AnchorPane>
+               <children>
+                  <ListView fx:id="lvListaWebsCargadas" prefHeight="570.0" prefWidth="250.0" />
+               </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+   <effect>
+      <SepiaTone />
+   </effect>
+</VBox>

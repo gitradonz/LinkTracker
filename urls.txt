@@ -1,0 +1,14 @@
+Aula Virtual IG Formación;http://igformacion.online/
+Menéame;https://www.meneame.net
+Consellería;http://www.ceice.gva.es
+NodeJS;https://nodejs.org/en/
+Filmaffinity;https://www.filmaffinity.com/es/main.html
+HobbyConsolas;https://www.hobbyconsolas.com/
+Sherlock IMDB;http://www.imdb.com/title/tt1475582/
+API NodeJS;https://nodejs.org/api/
+CodeSchool;https://www.codeschool.com/
+Wikipedia;https://www.wikipedia.org/
+KDE;https://www.kde.org/
+Anandtech;https://www.anandtech.com/
+Angular Github;https://github.com/angular/angular
+CropperJS;https://fengyuanchen.github.io/cropperjs/
